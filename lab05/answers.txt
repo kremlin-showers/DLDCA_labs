@@ -1,0 +1,8 @@
+I found stack handling to be the toughest part of the following prgramme. I feel it can still be improved with some practice tought.
+One error I made was while popping from the stack I was loading then incrementing sp while it should be the other way around (If while pushing you store and then decrement).
+The generally large codebase you get for even simple programmes in assembly is another problem. I feel that cannot b improved with practice and is an inherent challenge of trying to directly (Or with assistance of a C programme) write in assembly
+
+
+For isLessthan I pass the parameters in a0, a1, a2, a3.
+for numLessthan one of the parameters is on the stack (I took it to be the first i.e real part of elt. I realize it should actually have been the value of end on the stack but implementation wise it is equivalent and works just as well)
+I have also followed proper caller and calee conventions.

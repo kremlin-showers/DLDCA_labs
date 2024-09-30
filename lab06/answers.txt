@@ -1,0 +1,15 @@
+This implementation of factorial works only for relatively small integers.
+
+
+The stack frame format is as follows.
+We need to pass one of the arguments using the stack since number of arguments cannot w fit in four words. This argument is passed on top of the stack and is acessed by using lw on $sp with offset of 4. (It is the top value in the stack).
+
+Apart from this before a function call withinn the recursive step we also store the value of $ra onto the stack. but we still ensure that the argument is on top of the stack for the calee. (We restore $ra from the stack after the function call and return since the return value of the function is same as the return value of the recursive calee.)
+
+The stack depth is maximum when we are at the innermost function call. i.e one of the base cases. This can be seen by setting breakpoints wherever the stack is decremented and realizing the value of the stack is most negative when running through the base case.
+
+
+The maximum recursion depth we acheived was 5.
+the most amount of words stored in the stack (maximum depth of stack) was 9.
+1 initial value
+and 4 pairs of $rp and value on stack. (Minimum value of sp was 0x7ffff6c8)
