@@ -1,2 +1,2 @@
-# DLDCA_labs
-Solutions to the digital logic labs
+# DLDCA Labs
+Solutions to the digital logic labs for CS231
